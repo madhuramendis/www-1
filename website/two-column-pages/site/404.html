@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="author" content="WSO2, Inc."> 
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <title></title>
+
+
+
+            <meta property="og:type"               content="article" />
+            <meta property="og:title"              content="" />
+             
+             
+
+
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content="@cellerylang">
+            <meta name="twitter:creator" content="@cellerylang">
+            <meta name="twitter:title" content="">
+            
+            
+            
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:image:width" content="610">
+
+
+
+            <meta property='og:title' content=""/>
+            
+            
+
+
+
+
+
+    <script src="/js/moment-2.22.0/moment.min.js"></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+
+
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92163714-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-92163714-2');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PSL2TX4');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--<script src="/js/jquery-2.1.1.min.js"></script>-->
+    <!--<script src="/js/modernizr-2.8.3.min.js"></script>
+  	<script type="text/javascript" src="/js/highlight.pack.js"></script>-->
+
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/modernizr-2.8.3.min.js"></script>
+
+    <script>
+        var base_url = "";
+        var base_download_url = "";
+        var archived_versions_json = "";
+        var releaseNoteFilename = "";
+    </script>
+    <link rel="stylesheet" href="https://use.typekit.net/son4ymv.css" />
+    <link rel="stylesheet" href="/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="/css/theme_extra.css" type="text/css" />
+    <script type="text/javascript" src="/js/highlight.pack.js"></script>
+    <script src="/js/cellery-common.js"></script>
+    <script src="/js/jquery.validate.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="/css/cellery-io.css?200618">
+    <link rel="stylesheet" href="/css/cellery-io-docs.css?200618">    
+    <script>
+        $(document).ready(function() {
+            $("#slackSubscribeButton").click(function(event) {
+                event.preventDefault();
+                inviteSlackUser();
+            });
+            $('#email').on('keypress', function(event) {
+                if (event.which === 13) {
+                    event.preventDefault();
+                    $(this).attr("disabled", "disabled");
+                    inviteSlackUser();
+                    $(this).removeAttr("disabled");
+                }
+            });
+        });
+
+        function inviteSlackUser() {
+            $('#subscribeMessage').html('');
+            var email = $("#email").val();
+
+            if (email == "") {
+                $('#email').val('');
+                $("#email").attr("placeholder","Please enter your email.");
+            } else if (!isEmail(email)) {
+                $('#email').val('');
+                $("#email").attr("placeholder","Please enter a valid email.");
+            } else {
+                $('#email').val('');
+                $("#email").attr("placeholder","Processing...");
+                $.ajax({
+                    type: 'GET',
+                    url: '/slackServiceCall.php?email='+email,
+                    success: function(msg) {
+                        if (msg == 1) {
+                            $('#email').val('');
+                            $("#email").attr("placeholder","Your invitation has been sent.");
+                        } else {
+                            $('#email').val('');
+                            $("#email").attr("placeholder",msg);
+                        }
+                    }
+                });
+            }
+            return;
+        }
+    </script>
+    <script src="/search/require.js"></script>
+</head>
+
+<body class="cCellery-io" role="document">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSL2TX4"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="row cCellery-io-top-row">
+   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"></div>
+   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cTopLineContainer">
+      <div class="cTopLine"></div>
+   </div>
+</div>
+<div class="row cCellery-io-Nav" id="iMainNavigation">
+<!--   <div class="container">
+   
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+         <nav class="navbar">
+            <div>
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">&#9776</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                   <p class="navbar-brand cTagLine" href="#">Cloud Native Programming Language
+                    <a class="cMobileLogo" href="" ><img src="/img/Cellery-logo.svg" alt="Cellery"/></a>
+                  </p>
+               </div>
+               <div id="navbar" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav cTopNav">
+                     <li class="active toctree-l1" id="learnli"><a href="/learn">Learn</a></li>
+                     <li class="toctree-l1" id="philosophyli"><a href="/philosophy">Philosophy</a></li>
+                     <li class="toctree-l1" id="openli"><a href="/open-source">Open Source</a></li>
+                     <li class="toctree-l1" id="helpli"><a href="/help">Help </a></li>
+                     <li class="toctree-l1" id="blogli"><a href="#"> Blog </a></li>
+                     <li class="toctree-l1"><a class="cSerachIcon" href="#"><img src="/img/search.svg"/></a>
+                         <div class="cSearchBoxTopMenu">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="/search.html" method="get">
+    <input type="text" name="q" placeholder="Search" />
+  </form>
+</div></div>
+                     </li>
+                  </ul>
+               </div>
+               /.nav-collapse 
+            </div>
+         </nav>
+      </div>
+   </div>-->
+</div>
+<div class="row cCellery-io-Logo-row">
+   <div class="container">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cCellery-io-Logo-Container">
+         <a class="cLogo" href="/" ><img src="/img/cellery-images/cellery-logo.svg" alt="Cellery"/></a>
+      </div>
+   </div>
+</div>
+
+    <div class="row cCellery-io-White-row">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cCellery-io-Home-Left-col">
+                    <div class="cCellery-io-docs-left-nav-container">
+                        <div class="cSideBar-Button"><img src="/img/sidebar.svg" /></div>
+                        <div class="cCellery-io-docs-left-nav-box">
+                            <div class="cCellery-io-docs-Title">TABLE OF CONTENTS</div>
+                            <ul id="toc_list">
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 cCellery-io-Home-Middle-col">
+                    <div class="cCellery-io-breadcrumbs">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs" id="breadcrumb-list">
+    <li><a href="/">Home</a> &raquo;</li>
+    
+    
+    <li class="wy-breadcrumbs-aside" id="iGitEdit">
+      
+    </li>
+  </ul>
+
+</div>
+                    </div>
+                    <div class="cCellery-io-docs-content-container">
+                        <div class="wy-nav-content">
+                            <div class="rst-content">
+
+                                <div role="main">
+                                    <div class="section">
+                                        <!--                <h1></h1>-->
+                                        
+
+    <div class="row-fluid">
+      <div id="main-content" class="span12">
+        <h1 id="404-page-not-found" style="text-align: center">404</h1>
+        <p style="text-align: center"><strong>Page not found</strong></p>
+      </div>
+    </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="iCelleryFooter" class="row cCellery-io-White-row">
+
+</div>
+
+    <script>
+        $(document).ready(function() {
+            $(".cSideBar-Button").click(function() {
+                $(".cSideBar-Button").toggleClass('cOpen');
+                $(".cCellery-io-Home-Left-col").toggleClass('cOpen-col');
+            });
+
+            $("#breadcrumb-list li").each(function(index) {
+                var current = $(this);
+                var currentLink = $(current.find("a")[0]);
+                if (currentLink && currentLink.attr("href") == "#" && !current.hasClass("wy-breadcrumbs-aside") &&
+                    !current.next().hasClass("wy-breadcrumbs-aside")) {
+                    var prevLink = $(current.prev().find("a")[0]);
+                    if (prevLink && prevLink.attr("href") != "#") {
+                        currentLink.attr("href", prevLink.attr("href") +
+                            (prevLink.attr("href").match(/\/$/) ? "" : "/") +
+                            current.attr("link_candidate").toLowerCase().split(" ").join("-"));
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script src="/js/theme.js"></script>
+    <script src="/search/search.js"></script>
+
+    <!-- Slack form -->
+    <div class="modal fade" id="subscribe" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Request an invite</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="cCelleryFormFieldContainer">
+                            <span id="subscribeMessage"></span>
+                            <label class="subscribeForm">Email Address</label>
+                            <input maxlength="90" value="" id="email" name="email" placeholder="Email" title="Email" class="cTextfieldstyle contact_email subscribeForm" type="text">
+                        </div>
+                        <a class="cCelleryButtons subscribeForm" href="" id="subscribeButton">Submit</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cSocial-sidebar">
+                 <ul class="cHorizontalList cSocialMedia" style="list-style: none; padding: 0; margin: 0;">
+                     <li>
+                         <a target="_blank" rel="external nofollow"  class="w-inline-block social-share-btn tw" href="https://twitter.com/intent/tweet?" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;">
+                                 <img id="iFloating-Twitter-Share" src="https://cellery.io/img/twitter.svg" alt="Twitter">
+                             </a>
+                     </li>
+                     <li>
+                         <a target="_blank" rel="external nofollow" title="Share with your friends on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
+                             <img id="iFloating-Facebook-Share" src="https://cellery.io/img/facebook.svg" alt="Facebook">
+                         </a>
+                     </li>
+                     <li>
+                         <a target="_blank" rel="external nofollow" class="w-inline-block social-share-btn lnk" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;">
+                                 <img id="iFloating-LinkedIn-Share" src="https://cellery.io/img/linkedin.svg" alt="LinkedIn">
+                             </a>
+                     </li>
+                 </ul>
+             </div>
+
+
+    <script>
+   $(document).ready(function() {
+            var gitstar = '<iframe id="iGitStarIframe" src="https://ghbtns.com/github-btn.html?user=cellery-platform&repo=cellery-lang&type=star&count=true&size=small" frameborder="0" scrolling="0"></iframe>';
+            $('[data-button="iGitStarText"]').replaceWith(gitstar);
+
+            var gitwatch = '<iframe id="iGitWatchIframe" src="https://ghbtns.com/github-btn.html?user=cellery-platform&repo=cellery-lang&type=watch&count=true&size=lsmalle&v=2" frameborder="0" scrolling="0"></iframe>';
+            $('[data-button="iGitWatchText"]').replaceWith(gitwatch);
+
+    });
+   </script>
+
+   <style>
+       .cGitButtonContainer {
+           display: inline-block;
+           width: 100%;
+           margin-bottom: 0px;
+       }
+
+        #iGitStarText {
+            height: 20px;
+            float: left;
+            padding: 0;
+            margin: 0;
+        }
+       #iGitStarIframe , #iGitWatchIframe {
+            height: 20px;
+            width: 100px;
+            float: left;
+        }
+    </style>
+
+
+</body>
+
+</html>
