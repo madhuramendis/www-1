@@ -1,9 +1,9 @@
-site_name: Ballerina.io
-repo_url: https://github.com/ballerina-platform/ballerina-www/blob/master/
+site_name: Cellery.io
+repo_url: https://github.com/cellery-io/www
 edit_uri: website/two-column-pages/docs/
-site_description: Documentation for the Ballerina Programming Language
+site_description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
 site_author: WSO2, Inc.
-copyright: 2018 WSO2, Inc.
+copyright: 2019 WSO2, Inc.
 pages:
 - Learn: 'learn.md'
 theme: null
