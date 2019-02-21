@@ -280,7 +280,12 @@ ul.navbar-nav {
 .cCellery-io-Home-Left-col a {
     font-size: 16px;
     color: #29abe0;
-    font-weight: normal;
+    /* font-weight: 700; */
+    margin-top: 20px;
+
+display: inline-block;
+
+margin-bottom: 0px;
 }
 
 .cHomeButtonContainer {
@@ -409,7 +414,7 @@ box-shadow: -5px 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 h2.cMainH2Title {
-    font-weight: 200;
+    font-weight: 300;
     margin-bottom: 30px;
     margin-top: 0;
     color: #57595d;
@@ -424,11 +429,15 @@ h2.cMainH2Title {
 
 
 .cIntroContainer h1 {
-    font-size: 30px;
-line-height: 35px;
-margin: 0px 0 20px 0;
-font-weight: 200;
-font-family: "pragmatica", sans-serif;
+    font-size: 40px;
+
+    line-height: 50px;
+    
+    margin: 0px 0 20px 0;
+    
+    font-weight: 200;
+    
+    font-family: 'Roboto', sans-serif;
 }
 
 /*FOOTER*/
@@ -458,6 +467,7 @@ font-family: "pragmatica", sans-serif;
     font-weight: normal;
     font-size: 12px;
     letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .cCelleryFooterSignUp p {
@@ -474,6 +484,7 @@ font-family: "pragmatica", sans-serif;
     text-transform: uppercase;
     margin-bottom: 10px;
     display: inline-block;
+    font-weight: 700;
 }
 
 .cCellery-io-middle-col.cCelleryFooterSignUp {
@@ -1091,7 +1102,7 @@ pre code {
 /* CON BANNER */
 
 #iBanner {
-        display: inline-block;
+        display: none;
     width: 100%;
     transition: all 1.5s ease 0s;
     margin-top: -63px;

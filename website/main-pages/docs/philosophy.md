@@ -13,8 +13,7 @@
                   incididunt ut labore.
                </p>
             </div>
-            <p class="cGreenTitle "><a href="/downloads">Download &gt;</a></p>
-            <hr class="cHr">
+            <p class="cPhilosophyDownload"><a href="/downloads">DOWNLOAD CELLERY</a></p>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cInnerPageContentCol">
                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                   eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -58,20 +57,26 @@
 </div>
 <div class="row cCellery-io-White-row cPhilosophy cPhilosophy2 cDesign-Principles">
    <div class="container">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cPhilosophyWhite cHowballerinaworks cDesign-principles">
-         <h2 class="cMainH2Title">Lorem ipsum dolor sit amet</h2>
-         <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cInnerPageContentCol "></div> -->
-         <div class="col-xs-12 cCloudNative-box cLanguage-design-principles">
+     <div class="col-xs-12 cPhilosophyWhite cCloudNative">
+         <div class="col-xs-12">
+            <h2 class="cMainH2Title">Lorem ipsum dolor sit amet</h2>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 cInnerPageContentCol ">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+aliquip ex ea commodo consequat.
+               </p>
+            </div>
          </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 cCloudNativeControls">
          <ul>
-            <li class="cFixedWidthLink links first cActive active"><a href="#1b" data-toggle="tab">QUIS NOSTRUD</a></li>
-            <li class="cFixedWidthLink links"><a href="#2b" data-toggle="tab">LOREM IPSUM</a></li>
-            <li class="cFixedWidthLink links"><a href="#3b" data-toggle="tab">CONSECTETUR ADIPISCING ELIT</a></li>
-            <li class="cFixedWidthLink  links"><a href="#4b" data-toggle="tab">EA COMMODO CONSEQUAT</a></li>
-            <li class="cFixedWidthLink   links"><a href="#5b" data-toggle="tab">ULLAMCO LABORIS</a></li>
-            <li class="cFixedWidthLink  links"><a href="#6b" data-toggle="tab">LABORE ET DOLORE</a></li>
+            <li class="cFixedWidthLink links first cActive active"><a href="#1b" data-toggle="tab"><span>QUIS NOSTRUD</span></a></li>
+            <li class="cFixedWidthLink links"><a href="#2b" data-toggle="tab"><span>LOREM IPSUM</span></a></li>
+            <li class="cFixedWidthLink links"><a href="#3b" data-toggle="tab"><span>CONSECTETUR ADIPISCING ELIT</span></a></li>
+            <li class="cFixedWidthLink  links"><a href="#4b" data-toggle="tab"><span>EA COMMODO CONSEQUAT</span></a></li>
+            <li class="cFixedWidthLink   links"><a href="#5b" data-toggle="tab"><span>ULLAMCO LABORIS</span></a></li>
+            <li class="cFixedWidthLink  links"><a href="#6b" data-toggle="tab"><span>LABORE ET DOLORE</span></a></li>
          </ul>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 cPhilosophyWidget cBorderGray cGrayWidget">
@@ -315,29 +320,29 @@ aliquip ex ea commodo consequat.
          </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2  cCloudNative">
-         <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 cCloudNativeControls cIntegrationFrameworkNavLeftSide">
+         <div class="cCloudNativeControls cIntegrationFrameworkNavLeftSide">
             <ul>
-               <li class="links first cActive">Services and resources</li>
-               <li class="links">Endpoints</li>
-               <li class="links">Network Data Types and conversions</li>
-               <li class="links">Resilient communication</li>
-               <li class="links">Service Composition</li>
-               <li class="links">Asynchronous event-driven messaging</li>
-               <li class="links">Protocol conversions</li>
-               <li class="links">API Security</li>
+               <li class="links first cActive"><span>Services and resources</span></li>
+               <li class="links"><span>Endpoints</li>
+               <li class="links"><span>Network Data Types and conversions</span></li>
+               <li class="links"><span>Resilient communication</span></li>
+               <li class="links"><span>Service Composition</span></li>
+               <li class="links"><span>Asynchronous event-driven messaging</span></li>
+               <li class="links"><span>Protocol conversions</span></li>
+               <li class="links"><span>API Security</span></li>
             </ul>
          </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 cPhilosophyWidget cBorderGray cWhiteWidget">
-      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 cPhilosophyWidget cPaddingNone">
-         <div class="cBBE-links">
+        <div class="cBBE-links">
             <ul>
                <li>
                   <a class="copy" data-original-title="" title=""><img src="/img/copy-icon.svg"></a>
                </li>
             </ul>
          </div>
-         <div class="cCelleryPhilosophyCodeBox">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 cPhilosophyWidget cPaddingNone">
+       <div class="cCelleryPhilosophyCodeBox">
             <div id="ballerina_grammar_2" class="code-wrapper">
                <pre id="services-and-resources-code" class="code-block">
                         <code class="ballerina tab-pane active"></code>
@@ -485,7 +490,7 @@ aliquip ex ea commodo consequat.
             </div>
          </div>
       </div>
-      <div class="ccol-md-12 text-display hidden-xs hidden-sm code-block-text" id="protocol-conversions-text">
+      <div class="col-md-12 text-display hidden-xs hidden-sm code-block-text" id="protocol-conversions-text">
          <div data-startLine="1" data-endLine="64" class="hTrigger cCodeDesription gray">
             <div>
                <p>This example demonstrates a simple protocol switch from gRPC to HTTP. The listener endpoint retrieves gRPC messages that are transformed to JSON messages before sending to the back-end.</p>
@@ -502,7 +507,7 @@ aliquip ex ea commodo consequat.
             </div>
          </div>
       </div>
-      <div class="ccol-md-12 text-display hidden-xs hidden-sm code-block-text" id="api-security-text">
+      <div class="col-md-12 text-display hidden-xs hidden-sm code-block-text" id="api-security-text">
          <div data-startLine="1" data-endLine="54" class="hTrigger cCodeDesription gray">
             <div>
                <p>Ballerina provides security features such as OAuth2, Basic Auth, OCSP, etc. This sample demonstrates connecting to an endpoint with JWT.</p>
@@ -529,34 +534,6 @@ aliquip ex ea commodo consequat.
    </div>
    <div class="container">
       
-   </div>
-</div>
-<div class="row cCellery-io-Gray-row cPhilosophy cPhilosophy2" id="ballerina-by-examples">
-   <div class="container">
-      <div class="col-xs-12 cPhilosophyWhite cCloudNative">
-         <div class="col-xs-12">
-            <h2 class="cMainH2Title">Try the language with Ballerina by Example</h2>
-            <div class="col-xs-12 col-md-6 cInnerPageContentCol ">
-               <p>Ballerina by Example teaches you the language incrementally with commented examples that cover every nuance of our syntax. </p>
-            </div>
-         </div>
-      </div>
-      <div class="col-xs-12 cPhilosophyWhite cCloudNative clearfix">
-         <div class="col-xs-12">
-            <div id="ballerina-by-example">
-               <div class="cLanguageFeaturesContainer clearfix">
-                  <div class="col-xs-12 col-sm-16 col-md-3 col-lg-3 cLanguageFeatures featureSet0">
-                  </div>
-                  <div class="col-xs-12 col-sm-16 col-md-3 col-lg-3 cLanguageFeatures featureSet1">
-                  </div>
-                  <div class="col-xs-12 col-sm-16 col-md-3 col-lg-3 cLanguageFeatures featureSet2">
-                  </div>
-                  <div class="col-xs-12 col-sm-16 col-md-3 col-lg-3 cLanguageFeatures featureSet3">
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
    </div>
 </div>
 <script src="/js/philosophy.js"></script>

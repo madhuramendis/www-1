@@ -6,15 +6,19 @@ a,
 a:visited,
 a:hover,
 a:focus {
-/*    color: #20b6b0 !important;*/
+/*    color: #29abe0 !important;*/
 }
 
 .cDownloadsHeader h1 {
-    font-size: 30px;
-    line-height: 35px;
-    margin: 45px 0 20px 0;
+    font-size: 40px;
+
+    line-height: 50px;
+    
+    margin: 90px 0 20px 0;
+    
     font-weight: 200;
-    font-family: "pragmatica", sans-serif;
+    
+    font-family: 'Roboto', sans-serif;
 }
 
 .cDownloadsHeader p {
@@ -24,7 +28,7 @@ a:focus {
 
 .cDownloadsHeader a {
     font-size: 16px;
-    color: #20b6b0;
+    color: #29abe0;
 }
 
 .cDownloads {
@@ -79,12 +83,12 @@ a.cDownload .cSize {
 }
 
 .cArchived a:hover {
-    background-color: #20b6b0;
+    background-color: #29abe0;
 }
 
 .cReleaseNotes a {
     font-size: 16px;
-    color: #20b6b0;
+    color: #29abe0;
     font-family: "CalibreWeb-Semibold", "pragmatica", sans-serif;
     display: inline-block;
     letter-spacing: 1px;
@@ -102,7 +106,7 @@ a.cDownload .cSize {
 
 .cStandaloneInstallers .cInstallers,
 .cPlugins .cInstallers {
-    background-color: #ffffff;
+    background-color: #f2f5f5;
     padding: 32px 17px;
 }
 
@@ -132,7 +136,7 @@ a.cDownload .cSize {
 }
 
 .cInstallers table tr td a {
-    color: #20b6b0;
+    color: #29abe0;
 }
 
 .cInstallers table tr td a.cDownloadLinkIcon img {
@@ -143,7 +147,7 @@ a.cDownload .cSize {
 
 a.cDownload:hover {
     background-image: url("/img/download-bg-white.svg");
-    background-color: #20b6b0;
+    background-color: #29abe0;
     background-image: url("/img/download-bg-white.svg");
 }
 
@@ -169,7 +173,7 @@ ul.cDiwnloadSubLinks li:first-child {
 }
 
 ul.cDiwnloadSubLinks li a {
-    color: #20b6b0;
+    color: #29abe0;
 }
 
 .cReleseNotesContainer {
@@ -200,7 +204,7 @@ ul.cDiwnloadSubLinks li a {
 
 a.cArchivedReleaseNotesLink {
     font-size: 18px;
-    color: #20b6b0;
+    color: #29abe0;
     font-family: "CalibreWeb-Semibold", "pragmatica", sans-serif;
     display: inline-block;
     margin-top: 20px;
@@ -220,7 +224,7 @@ a.cArchivedReleaseNotesLink {
 
 .wy-breadcrumbs li,
 .wy-breadcrumbs li a {
-    color: #20b6b0 !important;
+    color: #29abe0 !important;
     font-size: 16px;
 }
 

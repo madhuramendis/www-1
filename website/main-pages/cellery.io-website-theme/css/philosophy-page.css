@@ -27,6 +27,7 @@
 .cPhil-title-boxes-container.cPhil-title-boxes-container-white {
     background-color: #ffffff;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .cPhil-title-boxes p {
@@ -244,6 +245,9 @@ ul.cPhilosophyWidgetControls {
 
 .cActive.active a {
     color: #5a5a5e;
+    background-image: url("/img/gray-line.png");
+    background-repeat: repeat-x;
+    background-position: top;
 }
 
 
@@ -285,6 +289,7 @@ ul.cPhilosophyWidgetControls {
 .cCloudNativeControls {
     /* padding-left: 0; */
     padding-top: 30px;
+    z-index: 99999;
 }
 
 .cCloudNativeNavLeftSide {
@@ -307,11 +312,16 @@ ul.cPhilosophyWidgetControls {
     font-size: 14px;
     letter-spacing: 1px;
     font-weight: 700;
-    line-height: 20px;
+    line-height: 17px;
     color: #29abe0;
     text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;
+}
+
+.cIntegrationFrameworkNavLeftSide li {
+    margin-bottom: 20px;
+    width: 184px;
 }
 
 .cCloudNativeControls li.cFixedWidthLink,
@@ -320,9 +330,15 @@ ul.cPhilosophyWidgetControls {
     margin-right: 50px;
     float: left;
     display: inline-block;
+}
+.cPhilosophy .cBBE-links {
 
+    position: absolute;
+    right: -28px;
+    top: -70px;
 
 }
+
 
 .cCloudNativeControls li.cFixedWidthLink {
     margin-bottom: 20px;
@@ -333,7 +349,7 @@ ul.cPhilosophyWidgetControls {
 }
 
 .cPhilosophyWhite.cCloudNative {
-    padding-bottom: 20px;
+    padding-bottom: 60px;
     padding-left: 0;
     padding-right: 0;
 }
@@ -356,6 +372,9 @@ ul.cPhilosophyWidgetControls {
     width: 100%;
 }
 
+.cDesign-Principles {
+    margin-bottom: 60px;
+}
 
 /* TYPE SAFETY */
 
@@ -375,6 +394,30 @@ ul.cPhilosophyWidgetControls {
     min-height: 500px;
 }
 
+.cPhilosophyDownload a {
+    background-image: url("/img/download-bg-green-fill.svg ");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 40px;
+    color: #29abe0;
+    margin: 31px 0;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+
+}
+
+.cFixedWidthLink span {
+    background: #ffffff;
+    padding-right: 10px;
+}
+
+.cIntegrationFrameworkNavLeftSide li span {
+   background: #f2f5f5;
+    padding-right: 10px;
+}
+
+
 
 /* highlight code segments in phylosophy page */
 
@@ -384,7 +427,7 @@ ul.cPhilosophyWidgetControls {
 
 .cCodeDesription {
     padding-left: 14px;
-    padding-right: 30px;
+    padding-right: 15px;
     min-width: 100%;
     background-image: url("/img/white-arrow.svg");
     background-position: left -14px;
@@ -426,13 +469,13 @@ div.cCodeDesription.gray {
 
 .cCodeDesription:hover>div,
 .cCodeDesription.active>div {
-    background-color: #22b7b1;
+    background-color: #29abe0;
     color: #fff;
 }
 
 .cCodeDesription.gray:hover>div,
 .cCodeDesription.gray.active>div {
-    background-color: #22b7b1;
+    background-color:#29abe0;
 }
 
 .cCodeDesription:hover>div p,
@@ -498,7 +541,7 @@ div.text-display div.cCodeDesription p {
 .overlay-highlight,
 .output-overlay-highlight {
     width: 100%;
-    background: #34c9bf;
+    background: #29abe0;
     opacity: 0.2;
     position: absolute;
 }
@@ -520,7 +563,7 @@ div.text-display div.cCodeDesription p {
 }
 
 .cCelleryPhilosophyCodeBox pre {
-    background-color: #fff;
+    background-color: #f2f5f5;
 }
 
 .cLanguageFeaturesContainer,
@@ -820,8 +863,13 @@ div.cPhilosophyWidgetContainer.cCelleryPhilosophyCodeBox {
     min-height: 50px;
 }
 
-.cActive {
-    color: #22b7b1 !important
+.cIntegrationFrameworkNavLeftSide .cActive {
+    color: #5a5a5e !important;
+    background-image: url("/img/white-line.png");
+
+background-repeat: repeat-x;
+
+background-position: top;
 }
 
 .paddingRemove {
@@ -844,6 +892,10 @@ div.cPhilosophyWidgetContainer.cCelleryPhilosophyCodeBox {
 
 #iMainNavigation.cShowBanner {
     margin-top: 0;
+}
+
+.cCloudNative {
+    z-index: 999999;
 }
 
 @media (min-width: 768px) {
